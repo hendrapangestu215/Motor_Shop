@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+* {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(120deg, #ff7a00, #24abc6);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.logo h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    margin-top: 15px;
+    border-bottom: 1px solid #A9A9A9;
+}
+
+.logo form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .user {
+    position: relative;
+    border-bottom:  2px solid #ADADAD;
+    margin: 30px 0;
+}
+
+.user input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.user label {
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    color: #ADADAD;
+    transform: translate(-50%);
+    pointer-events: none;
+    left: 40px;
+    margin-top: -10px;
+}
+
+.user span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: 0.5s;
+}
+
+.user input:focus ~ label,
+.user input:valid ~ label {
+    top: -5px;
+    color: #2691d9;
+}
+
+.user input:focus ~ span::before,
+.user input:valid ~ span::before {
+    width: 100%;
+}
+
+.password {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.password:hover {
+    text-decoration: underline;
+}
+
+.login {
+    text-align: center;
+}
+
+.login a {
+    font-size: 18px;
+    padding: 10px 34px;
+    background: none;
+    border: 2px solid #13131313;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.login a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 18px;
+    background-color: #2691d9;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.login a:hover::before {width: 100%;}
+
+.login a:hover {color: #fff;}
+
+.link_register {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+
+.link_register a {
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.link_register a:hover {
+    text-decoration: underline;
+}
